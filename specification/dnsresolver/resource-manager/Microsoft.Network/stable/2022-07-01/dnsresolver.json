@@ -64,18 +64,6 @@
           }
         ],
         "responses": {
-          "201": {
-            "description": "The DNS resolver has been created.",
-            "schema": {
-              "$ref": "#/definitions/DnsResolver"
-            }
-          },
-          "200": {
-            "description": "The DNS resolver has been updated.",
-            "schema": {
-              "$ref": "#/definitions/DnsResolver"
-            }
-          },
           "202": {
             "description": "The operation to upsert DNS resolver has been accepted and will complete asynchronously."
           },
@@ -87,6 +75,9 @@
           }
         },
         "x-ms-long-running-operation": true,
+        "x-ms-long-running-operation-options": {
+          "final-state-schema": "#/definitions/DnsResolver"
+        },
         "x-ms-examples": {
           "Upsert DNS resolver": {
             "$ref": "./examples/DnsResolver_Put.json"
