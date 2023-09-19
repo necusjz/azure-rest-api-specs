@@ -737,9 +737,6 @@
     },
     "MetricAlertCriteria": {
       "type": "object",
-      "additionalProperties": {
-        "type": "object"
-      },
       "discriminator": "odata.type",
       "properties": {
         "odata.type": {
@@ -897,9 +894,6 @@
     },
     "MultiMetricCriteria": {
       "type": "object",
-      "additionalProperties": {
-        "type": "object"
-      },
       "discriminator": "criterionType",
       "properties": {
         "criterionType": {

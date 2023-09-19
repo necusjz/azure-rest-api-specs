@@ -205,7 +205,7 @@
       "type": "object",
       "properties": {
         "cost": {
-          "type": "number",
+          "type": "integer",
           "format": "int32",
           "minimum": 0,
           "description": "The integer value representing the relative cost of the query."
