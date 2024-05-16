@@ -8539,7 +8539,8 @@
             "description": "is updating"
           }
         ]
-      }
+      },
+      "readOnly": true
     },
     "PlacementPolicyState": {
       "type": "string",
@@ -8696,13 +8697,6 @@
             "read",
             "create"
           ]
-        },
-        "tags": {
-          "type": "object",
-          "description": "Resource tags.",
-          "additionalProperties": {
-            "type": "string"
-          }
         },
         "sku": {
           "$ref": "../../../../../common-types/resource-management/v5/types.json#/definitions/Sku",
@@ -10255,7 +10249,8 @@
             "description": "is updating"
           }
         ]
-      }
+      },
+      "readOnly": true
     },
     "WorkloadNetworkDhcpRelay": {
       "type": "object",
@@ -10483,7 +10478,8 @@
             "description": "is updating"
           }
         ]
-      }
+      },
+      "readOnly": true
     },
     "WorkloadNetworkDnsServiceUpdate": {
       "type": "object",
@@ -10626,7 +10622,8 @@
             "description": "is updating"
           }
         ]
-      }
+      },
+      "readOnly": true
     },
     "WorkloadNetworkDnsZoneUpdate": {
       "type": "object",
@@ -10845,7 +10842,8 @@
             "description": "is updating"
           }
         ]
-      }
+      },
+      "readOnly": true
     },
     "WorkloadNetworkPortMirroringUpdate": {
       "type": "object",
@@ -11030,7 +11028,8 @@
             "description": "is updating"
           }
         ]
-      }
+      },
+      "readOnly": true
     },
     "WorkloadNetworkSegment": {
       "type": "object",
@@ -11171,7 +11170,8 @@
             "description": "is updating"
           }
         ]
-      }
+      },
+      "readOnly": true
     },
     "WorkloadNetworkSegmentSubnet": {
       "type": "object",
@@ -11320,7 +11320,8 @@
             "description": "is updating"
           }
         ]
-      }
+      },
+      "readOnly": true
     },
     "WorkloadNetworkVMGroupUpdate": {
       "type": "object",

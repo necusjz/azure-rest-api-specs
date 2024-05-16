@@ -5,7 +5,6 @@ import "@azure-tools/typespec-azure-core";
 using TypeSpec.Rest;
 using TypeSpec.Http;
 using Azure.ResourceManager;
-using Azure.ResourceManager.Foundations;
 using TypeSpec.OpenAPI;
 
 namespace Microsoft.AVS;
@@ -623,9 +622,8 @@ model LocationProperties {
 
 @doc("A private cloud resource")
 model PrivateCloud is TrackedResource<PrivateCloudProperties> {
-  ...ArmTagsProperty;
   ...ResourceSkuRequired;
-  ...ManagedSystemAssignedIdentity;
+  ...ManagedSystemAssignedIdentityProperty;
 
   @doc("Name of the private cloud")
   @pattern("^[-\\w\\._]+$")
@@ -645,9 +643,9 @@ model PrivateCloudNameParameter {
 
 @doc("An update to a private cloud resource")
 model PrivateCloudUpdate {
-  ...ArmTagsProperty;
-  ...ResourceSku;
-  ...ManagedSystemAssignedIdentity;
+  ...Foundations.ArmTagsProperty;
+  ...ResourceSkuProperty;
+  ...ManagedSystemAssignedIdentityProperty;
 
   @doc("The updatable properties of a private cloud resource")
   @extension("x-ms-client-flatten", true)
@@ -967,7 +965,7 @@ model ClusterProperties {
 
 @doc("An update of a cluster resource")
 model ClusterUpdate {
-  ...ResourceSku;
+  ...ResourceSkuProperty;
 
   @doc("The properties of a cluster resource that may be updated")
   @extension("x-ms-client-flatten", true)
@@ -2224,5 +2222,5 @@ union IscsiPathProvisioningState {
 @doc("The SKU (Stock Keeping Unit) assigned to this resource.")
 model ResourceSkuRequired {
   @doc("The SKU (Stock Keeping Unit) assigned to this resource.")
-  sku: ResourceSkuType;
+  sku: Foundations.Sku;
 }
